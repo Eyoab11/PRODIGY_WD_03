@@ -71,7 +71,7 @@ const WithAI = () => {
 
     const renderCell = (row, col) => {
         const isWinningCell = winningCells.some(cell => cell[0] === row && cell[1] === col);
-        const cellClassName = `w-24 h-24 bg-white border-2 border-gray-800 text-2xl font-bold ${isWinningCell ? 'bg-blue-200' : ''}`;
+        const cellClassName = `w-24 h-24 bg-white border-2 border-gray-800 text-2xl font-bold ${isWinningCell ? 'bg-blue-300' : ''}`;
 
         return (
             <button
@@ -215,7 +215,7 @@ const WithAI = () => {
             <div className='text-xl'>Status: {status}</div>
             <div>
                 <button className='bg-blue-500 text-white px-4 py-2 m-2 rounded-xl' onClick={resetGame}>Reset Game</button>
-                <Link className='bg-red-500 text-white px-4 py-2 m-2 rounded-xl' to={"/"}>Play with 2 players</Link>
+                <Link className='bg-red-500 text-white px-4 py-2 m-2 rounded-xl' to={"/two-players"}>Play with 2 players</Link>
             </div>
         </div>
     );
